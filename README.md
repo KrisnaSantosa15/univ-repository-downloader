@@ -160,7 +160,3 @@ Built with these amazing tools:
 Special thanks to **UPI (Universitas Pendidikan Indonesia)** for their repository system.
 
 ---
-
-**Version**: 3.0 | **Repository**: reader-repository.upi.edu
-
-Need help? Check `TECHNICAL_DOCUMENTATION.md` for detailed technical info.

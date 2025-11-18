@@ -1,0 +1,3 @@
+DOCUMENT_TITLE=<your_document_title_here>
+DOCUMENT_ID=<your_document_id_here>
+COOKIE=<your_authentication_cookie_here>

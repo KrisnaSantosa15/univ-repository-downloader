@@ -1,12 +1,12 @@
 # 📚 UPI Repository Downloader
 
-![User Journey](documentation/user-journey.png)
+<center><img src="documentation/user-journey.png" alt="User Journey" width="300"></center>
 
 A beautiful, modular Python application for downloading and converting thesis chapters from Universitas Pendidikan Indonesia (UPI) repository.
 
 ## ✨ Features
 
-![Features](documentation/features.png)
+<center><img src="documentation/features.png" alt="Features" width="300"></center>
 
 - 🤖 **Auto-detect chapters and pages** - No manual counting needed
 - 🌐 **Browser automation** - Automatic cookie extraction

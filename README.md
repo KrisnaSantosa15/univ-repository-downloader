@@ -16,18 +16,63 @@ A beautiful, modular Python application for downloading and converting thesis ch
 
 ## 🚀 Quick Start
 
-### 1. Install Dependencies
+### Option 1: Use the Executable (Easiest - Windows Only)
+
+**No Python installation required!**
+
+#### 📥 Download & Install
+
+1. **Go to [Releases](https://github.com/KrisnaSantosa15/univ-repository-downloader/releases/latest)**
+2. **Download** `UPI-Repository-Downloader-v3.0.0.zip` (~40 MB)
+3. **Extract** the ZIP file to any location (e.g., `C:\Tools\UPI-Downloader`)
+4. **Double-click** `UPI-Repository-Downloader.exe`
+5. **Follow** the setup wizard
+
+**Windows Security Warning:** When you first run the EXE, Windows may show *"Windows protected your PC"*. This is normal for unsigned applications. Click **"More info"** → **"Run anyway"**.
+
+#### 📋 What's Included
+
+The executable package includes:
+- ✅ Python runtime (no installation needed)
+- ✅ All required libraries
+- ✅ Complete documentation
+
+**Optional (for advanced features):**
+- Chrome browser - For automatic cookie extraction
+- Tesseract OCR - For DOCX conversion with text extraction
+
+[📦 Download Latest Release](https://github.com/KrisnaSantosa15/univ-repository-downloader/releases/latest) | [📖 Full Release Guide](dev/guides/GITHUB_RELEASE_GUIDE.md)
+
+---
+
+### Option 2: Run from Source (For Developers / All Platforms)
+
+#### Prerequisites
+- Python 3.8 or higher
+- pip (Python package manager)
+- Git (optional, for cloning)
+
+#### Installation Steps
+
+1. **Clone or Download the Repository**
+```bash
+git clone https://github.com/KrisnaSantosa15/univ-repository-downloader.git
+cd univ-repository-downloader
+```
+Or download as ZIP from GitHub and extract.
+
+2. **Install Python Dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. (Optional) Install Tesseract OCR
+3. **(Optional) Install Tesseract OCR**
 For DOCX conversion with text extraction:
-- **Windows**: [Download here](https://github.com/UB-Mannheim/tesseract/wiki)
+- **Windows**: [Download installer](https://github.com/UB-Mannheim/tesseract/wiki) and add to PATH
 - **Linux**: `sudo apt install tesseract-ocr tesseract-ocr-ind`
-- **Mac**: `brew install tesseract tesseract-lang`
+- **macOS**: `brew install tesseract tesseract-lang`
 
-### 3. Run
+4. **Run the Application**
 ```bash
 python main.py
 ```

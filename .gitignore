@@ -219,3 +219,14 @@ __marimo__/
 download_config.txt
 downloaded/
 *.log
+
+# PyInstaller build files
+build/
+dist/
+*.spec.bak
+__pycache__/
+*.pyc
+
+# Development files (internal use only)
+dev/
+releases/

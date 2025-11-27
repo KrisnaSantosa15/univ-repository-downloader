@@ -1,5 +1,6 @@
 # 📚 UPI Repository Downloader
 
+
 <center><img src="documentation/user-journey.png" alt="User Journey" width="300"></center>
 
 A beautiful, modular Python application for downloading and converting thesis chapters from Universitas Pendidikan Indonesia (UPI) repository.
@@ -8,11 +9,14 @@ A beautiful, modular Python application for downloading and converting thesis ch
 
 <center><img src="documentation/features.png" alt="Features" width="300"></center>
 
+- 🎨 **Beautiful GUI** - Modern Material Design 3 interface with file explorer and PDF viewer
+- 🖥️ **Terminal UI** - Classic command-line interface for power users
 - 🤖 **Auto-detect chapters and pages** - No manual counting needed
 - 🌐 **Browser automation** - Automatic cookie extraction
 - 📥 **Flexible downloads** - Download all, specific, or manual ranges
 - 📄 **Multiple formats** - PDF (fast) or DOCX with OCR (text extraction)
-- 🎨 **Beautiful UI** - Interactive terminal interface with progress bars
+- 📁 **File Management** - Built-in file explorer with PDF preview
+- 🔄 **Combined PDFs** - Automatically creates master PDF from all chapters
 
 ## 🚀 Quick Start
 
@@ -22,20 +26,46 @@ A beautiful, modular Python application for downloading and converting thesis ch
 
 #### 📥 Download & Install
 
+Choose your preferred version:
+
+**🎨 GUI Version (Recommended for most users)**
 1. **Go to [Releases](https://github.com/KrisnaSantosa15/univ-repository-downloader/releases/latest)**
-2. **Download** `UPI-Repository-Downloader-v3.0.0.zip` (~40 MB)
-3. **Extract** the ZIP file to any location (e.g., `C:\Tools\UPI-Downloader`)
+2. **Download** `UPI-Repository-Downloader-GUI-v4.0.0-windows.zip` (~82 MB)
+3. **Extract** the ZIP file to any location (e.g., `C:\Tools\UPI-Downloader-GUI`)
+4. **Double-click** `UPI-Repository-Downloader-GUI.exe`
+5. **Enjoy** the beautiful Material Design interface!
+
+**Features:**
+- ✨ Modern, intuitive interface
+- 📁 Built-in file explorer with folder navigation
+- 📄 PDF viewer with file info and open button
+- 🎯 Visual progress tracking
+- 🖱️ Point-and-click operation
+
+**🖥️ CLI Version (For power users & servers)**
+1. **Go to [Releases](https://github.com/KrisnaSantosa15/univ-repository-downloader/releases/latest)**
+2. **Download** `UPI-Repository-Downloader-CLI-v4.0.0-windows.zip` (~51 MB)
+3. **Extract** the ZIP file to any location (e.g., `C:\Tools\UPI-Downloader-CLI`)
 4. **Double-click** `UPI-Repository-Downloader.exe`
-5. **Follow** the setup wizard
+5. **Follow** the terminal setup wizard
+
+**Features:**
+- ⚡ Lightweight and fast
+- 💻 Perfect for remote servers
+- 🎯 Keyboard-driven workflow
+- 📊 Detailed console output
 
 **Windows Security Warning:** When you first run the EXE, Windows may show *"Windows protected your PC"*. This is normal for unsigned applications. Click **"More info"** → **"Run anyway"**.
 
 #### 📋 What's Included
 
-The executable package includes:
+<center><img src="documentation/gui.png" alt="User Journey" width="300"></center>
+
+Both executable packages include:
 - ✅ Python runtime (no installation needed)
-- ✅ All required libraries
+- ✅ All required libraries bundled
 - ✅ Complete documentation
+- ✅ Ready to run - just extract and double-click!
 
 **Optional (for advanced features):**
 - Chrome browser - For automatic cookie extraction
@@ -73,14 +103,71 @@ For DOCX conversion with text extraction:
 - **macOS**: `brew install tesseract tesseract-lang`
 
 4. **Run the Application**
+
+**GUI Version (with beautiful interface):**
+```bash
+python main_gui.py
+```
+
+**CLI Version (terminal interface):**
 ```bash
 python main.py
 ```
 
 ## 📖 Usage
 
-### First Run - Setup Wizard
-The app will guide you through:
+### 🎨 GUI Version
+
+#### Navigation
+The GUI features 6 main pages accessible via the left sidebar:
+
+1. **🏠 Home (Welcome)** - First-run setup wizard
+   - Enter document title and ID
+   - Browser automation for cookies
+   - Quick start guide
+
+2. **📥 Download** - Download chapters with progress tracking
+   - **Auto-detect All**: Finds all chapters automatically
+   - **Specific Chapter**: Select one chapter
+   - **Manual Mode**: Specify exact ranges
+   - Real-time progress bars
+   - Download logs
+
+3. **📁 Files** - File explorer with PDF viewer
+   - Navigate all downloaded documents
+   - Browse chapter folders
+   - View PDF files with file info
+   - Open PDFs in default viewer
+   - Shows combined PDFs and individual chapters
+
+4. **🔄 Convert** - Convert images to PDF/DOCX
+   - Select folder to convert
+   - Choose output format
+   - Progress tracking
+
+5. **⚙️ Settings** - Configure application
+   - Update document ID
+   - Refresh cookies with browser automation
+   - OCR language settings
+
+6. **ℹ️ Info** - View app information
+   - Current configuration
+   - Downloaded chapters
+   - Developer credits
+   - Feature list
+
+#### First Run
+1. Launch the GUI
+2. Enter **Document Title** and **Document ID**
+3. Click **"Get Started with Browser"** (or manual cookie entry)
+4. Browser opens automatically → you log in
+5. Cookies extracted automatically
+6. Start downloading!
+
+### 🖥️ CLI Version
+
+#### First Run - Setup Wizard
+The terminal app will guide you through:
 1. **Document Title** - Enter the thesis name
 2. **Document ID** - Find it in the URL: `https://reader-repository.upi.edu/[ID]`
 
@@ -92,9 +179,9 @@ Your settings are saved to `download_config.txt` for next time.
 
 ![Setup Wizard Screenshot](documentation/setup-wizard.png)
 
-### Main Menu Options
+#### Main Menu Options
 
-#### 📥 Download
+**📥 Download**
 - **Auto-detect all**: Finds and downloads all chapters automatically
 - **Select specific**: Pick one chapter with auto page detection
 - **Manual mode**: Specify exact chapter and page numbers
@@ -106,15 +193,16 @@ Your settings are saved to `download_config.txt` for next time.
 ![Download Progress Screenshot](documentation/checking-chapters.png)
 
 ![Completed Download Screenshot](documentation/completed.png)
-#### 📄 Convert
+
+**📄 Convert**
 Convert downloaded images to:
 - PDF (preserves image quality)
 - DOCX with OCR (extracts text - Indonesian/English)
 
-#### ⚙️ Settings
+**⚙️ Settings**
 Update document ID, cookies, output folder, or OCR language
 
-#### ℹ️ Info
+**ℹ️ Info**
 View current configuration and downloaded chapters
 
 ## 📁 Output Structure
@@ -148,13 +236,26 @@ The project follows a professional modular structure:
 
 ```
 univ-repository-downloader/
-├── main.py              # Entry point
+├── main.py              # CLI entry point
+├── main_gui.py          # GUI entry point
 ├── src/                 # Source code
 │   ├── config/         # Configuration
 │   ├── core/           # Core logic (download, convert)
-│   └── ui/             # User interface
+│   ├── ui/             # Terminal UI components
+│   └── gui/            # GUI components (Flet)
+│       ├── main_window.py      # Navigation & routing
+│       └── pages/              # GUI pages
+│           ├── welcome_page.py
+│           ├── download_page.py
+│           ├── files_page.py
+│           ├── convert_page.py
+│           ├── settings_page.py
+│           └── info_page.py
+├── build_exe.spec      # PyInstaller spec for CLI
+├── build_gui.spec      # PyInstaller spec for GUI
 ├── scripts/            # Utility scripts
 ├── documentation/      # Screenshots & docs
+├── releases/           # Release packages
 └── downloaded/         # Output directory
 ```
 
@@ -213,11 +314,17 @@ Educational use only. Use responsibly and ethically.
 ## 🙏 Acknowledgments
 
 Built with these amazing tools:
+- [Flet](https://flet.dev/) - Beautiful cross-platform GUI framework
 - [Rich](https://github.com/Textualize/rich) - Beautiful terminal UI
 - [Questionary](https://github.com/tmbo/questionary) - Interactive prompts
 - [Selenium](https://www.selenium.dev/) - Browser automation
+- [PyInstaller](https://pyinstaller.org/) - Executable packaging
 - [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) - Text extraction
 - [img2pdf](https://gitlab.mister-muffin.de/josch/img2pdf) - Fast PDF creation
+- [PyPDF2](https://github.com/py-pdf/PyPDF2) - PDF manipulation
+- [python-docx](https://github.com/python-openxml/python-docx) - DOCX generation
+
+**Developed by [Krisna Santosa](https://github.com/KrisnaSantosa15)** 💜
 
 Special thanks to **UPI (Universitas Pendidikan Indonesia)** for their repository system.
 

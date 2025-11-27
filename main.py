@@ -8,11 +8,9 @@ Version: 3.0
 import warnings
 from rich.console import Console
 from rich.prompt import Confirm
-from config import Config
-from downloader import ImageDownloader
-from converter import FileConverter
-from menu import MenuSystem
-from setup_wizard import run_setup_wizard, save_config_to_file, load_config_from_file
+from src.config import Config
+from src.core import ImageDownloader, FileConverter
+from src.ui import MenuSystem, run_setup_wizard, save_config_to_file, load_config_from_file
 
 # Suppress SSL warnings (since we're using verify=False)
 warnings.filterwarnings('ignore', message='Unverified HTTPS request')

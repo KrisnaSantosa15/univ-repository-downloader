@@ -65,7 +65,7 @@ def run_setup_wizard():
     cookie_string = ""
     if use_browser:
         try:
-            from browser_automation import get_cookies_from_browser, test_cookies
+            from src.core.browser_automation import get_cookies_from_browser, test_cookies
 
             console.print()
             console.print("[cyan]🌐 Starting browser automation...[/cyan]")

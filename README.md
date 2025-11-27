@@ -95,8 +95,25 @@ downloaded/
 
 ## 🛠️ Utility Scripts
 
-- **Check dependencies**: `python check_dependencies.py`
-- **Debug document access**: `python simple_debug.py`
+- **Check dependencies**: `python scripts/check_dependencies.py`
+
+## 📁 Project Structure
+
+The project follows a professional modular structure:
+
+```
+univ-repository-downloader/
+├── main.py              # Entry point
+├── src/                 # Source code
+│   ├── config/         # Configuration
+│   ├── core/           # Core logic (download, convert)
+│   └── ui/             # User interface
+├── scripts/            # Utility scripts
+├── documentation/      # Screenshots & docs
+└── downloaded/         # Output directory
+```
+
+See [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md) for detailed documentation.
 
 ## 🐛 Common Issues
 
@@ -125,9 +142,9 @@ Want to improve this tool? Here's how:
 
 ### Adapting for Other Repositories
 Modify these files:
-- `config.py` - Update URL patterns
-- `downloader.py` - Adjust chapter detection
-- `browser_automation.py` - Update cookie requirements
+- `src/config/config.py` - Update URL patterns
+- `src/core/downloader.py` - Adjust chapter detection
+- `src/core/browser_automation.py` - Update cookie requirements
 
 ## ⚠️ Legal & Ethics
 

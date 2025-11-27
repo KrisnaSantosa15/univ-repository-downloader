@@ -9,13 +9,9 @@ import time
 
 # ========== KONFIGURASI ==========
 COOKIE_STRING = "your_cookie_here"
-# jangan panggil/print cookie ini di log jika berbagi script
-
-# Range halaman (sesuaikan jika perlu)
 BAB2_START, BAB2_END = 0, 20
 BAB4_START, BAB4_END = 0, 20
 
-# Base URL (saya gunakan pola img; script akan coba 'file' jika 404)
 BASE_BAB2 = "https://reader-repository.upi.edu/index.php/display/img/130155/3/"
 BASE_BAB4_IMG = "https://reader-repository.upi.edu/index.php/display/img/130155/4/"
 BASE_BAB4_FILE = "https://reader-repository.upi.edu/index.php/display/file/130155/4/"
@@ -37,7 +33,6 @@ def download_range(base_url_img, base_url_file, start, end, outsub):
     os.makedirs(path, exist_ok=True)
     saved_files = []
     for i in range(start, end + 1):
-        # coba pola img dulu, jika 404 coba pola file (ada variasi di link yang kamu sebut)
         tried_urls = [f"{base_url_img}{i}", f"{base_url_file}{i}"]
         content = None
         used_url = None
@@ -53,7 +48,6 @@ def download_range(base_url_img, base_url_file, start, end, outsub):
                 used_url = url
                 break
             else:
-                # beberapa server merespon 200 tapi content html (login page). Cek content-type
                 ct = r.headers.get("Content-Type", "")
                 if r.status_code == 200 and ("image" in ct or r.content[:4].startswith(b'\xff\xd8') or r.content[:8].startswith(b'\x89PNG')):
                     content = r.content
@@ -74,7 +68,7 @@ def download_range(base_url_img, base_url_file, start, end, outsub):
             f.write(content)
         saved_files.append(os.path.join(path, fname))
         print(f"Unduh: {used_url} -> {outsub}/{fname}")
-        time.sleep(0.2)  # jeda kecil agar tidak membanjiri server
+        time.sleep(0.2)
     return saved_files
 
 
@@ -94,7 +88,6 @@ def ocr_images_to_docx(img_files, out_docx, lang="ind"):
         except Exception as e:
             print(f"Cannot open {img_path}: {e}")
             continue
-        # OCR - atur bahasa sesuai instalasi tesseract (mis. 'ind' untuk Bahasa Indonesia)
         try:
             text = pytesseract.image_to_string(img, lang=lang)
         except Exception as e:

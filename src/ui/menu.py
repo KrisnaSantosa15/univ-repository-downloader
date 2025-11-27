@@ -9,7 +9,7 @@ from rich.panel import Panel
 from rich.table import Table
 from rich import box
 from rich.text import Text
-from menu_auto import download_menu_auto
+from .menu_auto import download_menu_auto
 
 console = Console()
 

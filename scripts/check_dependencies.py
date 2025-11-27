@@ -22,7 +22,7 @@ def check_package(package_name, import_name=None):
 def main():
     """Check all required dependencies"""
     print("=" * 60)
-    print("Skripsi Downloader - Dependency Checker")
+    print("UPI Repository Downloader - Dependency Checker")
     print("=" * 60)
     print()
 

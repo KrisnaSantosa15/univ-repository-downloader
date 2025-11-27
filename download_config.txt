@@ -1,3 +1,3 @@
-DOCUMENT_TITLE=<your_document_title_here>
-DOCUMENT_ID=<your_document_id_here>
-COOKIE=<your_authentication_cookie_here>
+DOCUMENT_TITLE=test
+DOCUMENT_ID=130155
+COOKIE=_gat_gtag_UA_225867824_1=1; _gid=GA1.2.1011420232.1764250137; _ga=GA1.2.1555553397.1764250137; _ga_JGGM3FEYDE=GS2.1.s1764250136$o1$g0$t1764250136$j60$l0$h0; PHPSESSID=ST-21912-h1IIoxbb94fDxrcSZXYL-cas01exampleorg
